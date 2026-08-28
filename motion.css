@@ -1,0 +1,79 @@
+/* MODERN MOTION KIT · Local Business Edition
+   Movimiento discreto para websites comerciales. Sin scrollytelling, 3D ni hijacking. */
+
+:root {
+  --mk-distance: 18px;
+  --mk-duration: 620ms;
+  --mk-ease: cubic-bezier(.2,.75,.2,1);
+}
+
+.mk-reveal,
+.mk-image-reveal,
+.mk-stagger > * {
+  opacity: 0;
+  transform: translateY(var(--mk-distance));
+  transition:
+    opacity var(--mk-duration) var(--mk-ease),
+    transform var(--mk-duration) var(--mk-ease);
+}
+
+.mk-reveal.mk-in,
+.mk-image-reveal.mk-in,
+.mk-stagger.mk-in > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mk-stagger.mk-in > *:nth-child(2) { transition-delay: 70ms; }
+.mk-stagger.mk-in > *:nth-child(3) { transition-delay: 140ms; }
+.mk-stagger.mk-in > *:nth-child(4) { transition-delay: 210ms; }
+.mk-stagger.mk-in > *:nth-child(5) { transition-delay: 280ms; }
+.mk-stagger.mk-in > *:nth-child(6) { transition-delay: 350ms; }
+
+.mk-image-reveal {
+  transform: translateY(12px) scale(.985);
+}
+
+.mk-image-reveal.mk-in {
+  transform: translateY(0) scale(1);
+}
+
+/* Hover opcional: deliberadamente pequeño. */
+.mk-lift {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mk-lift:hover { transform: translateY(-4px); }
+}
+
+/* Header que gana superficie al hacer scroll. El sitio define colores vía variables. */
+.mk-header {
+  transition: background-color 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.mk-header.mk-scrolled {
+  background: color-mix(in srgb, var(--color-bg, #fff) 94%, transparent);
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+  }
+
+  .mk-reveal,
+  .mk-image-reveal,
+  .mk-stagger > *,
+  .mk-lift,
+  .mk-header {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

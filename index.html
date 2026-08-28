@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacheco's Service &amp; Repair LLC | Licensed Electrician in Queen Creek, AZ</title>
+<meta name="description" content="Family-owned, licensed electrician serving Queen Creek, San Tan Valley, Chandler, Gilbert &amp; Mesa, AZ. Free quotes, ceiling fans, EV chargers, lighting, troubleshooting and commercial electrical work. Call 480-251-2517.">
+<link rel="icon" href="assets/logo-badge.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="motion.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Electrician",
+  "name": "Pacheco's Service & Repair LLC",
+  "image": "https://www.electricalrepairs48.com/",
+  "telephone": "+14802512517",
+  "email": "Pachecosservicerepair2022@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4170 West Goldmine Mountain Drive",
+    "addressLocality": "Queen Creek",
+    "addressRegion": "AZ",
+    "postalCode": "85142-3727",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Queen Creek, AZ", "San Tan Valley, AZ", "Chandler, AZ", "Gilbert, AZ", "Mesa, AZ"],
+  "url": "https://www.electricalrepairs48.com"
+}
+</script>
+<style>
+  :root {
+    --color-primary: #c81d25;
+    --color-primary-dark: #a3161d;
+    --color-secondary: #14181f;
+    --color-accent: #e8b23d;
+    --color-bg: #ffffff;
+    --color-surface: #f4f5f7;
+    --color-text: #161a20;
+    --color-muted: #5b6270;
+    --border: color-mix(in srgb, var(--color-text) 12%, transparent);
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 24px;
+    --shadow-sm: 0 8px 30px rgba(0,0,0,.08);
+    --container: 1200px;
+    --font-head: "Poppins", sans-serif;
+    --font-body: "Inter", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  .wrap {
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: clamp(1.1rem, 4vw, 2rem);
+  }
+
+  h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0; }
+  h1 { font-size: clamp(2rem, 4.6vw, 3.1rem); font-weight: 800; }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; }
+  h3 { font-size: clamp(1.05rem, 1.6vw, 1.25rem); font-weight: 600; }
+  p { margin: 0; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  section { padding-block: clamp(3rem, 7vw, 5.5rem); }
+  .section-head { max-width: 640px; margin-bottom: clamp(2rem, 4vw, 3rem); }
+  .section-head p { color: var(--color-muted); margin-top: .75rem; font-size: 1.05rem; }
+  .alt-surface { background: var(--color-surface); }
+
+  :focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .85rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .98rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, border-color 160ms ease;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--color-primary); color: #fff; box-shadow: 0 10px 24px rgba(200,29,37,.28); }
+  .btn-primary:hover { background: var(--color-primary-dark); }
+  .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.55); }
+  .btn-ghost:hover { border-color: #fff; }
+  .btn-outline { background: transparent; color: var(--color-secondary); border-color: var(--border); }
+  .btn-outline:hover { border-color: var(--color-secondary); }
+  @media (hover:hover) and (pointer:fine) {
+    .btn:hover { transform: translateY(-2px); }
+  }
+
+  /* Header */
+  .mk-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0);
+    --hdr-text: #fff;
+    --hdr-muted: rgba(255,255,255,.8);
+  }
+  .mk-header.mk-scrolled {
+    --hdr-text: var(--color-secondary);
+    --hdr-muted: var(--color-muted);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: .8rem;
+  }
+  .brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
+  .brand img { height: 42px; width: auto; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,.35); }
+  .brand-name { font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; color: var(--hdr-text); line-height: 1.15; transition: color 220ms ease; }
+  .brand-name small { display: block; font-family: var(--font-body); font-weight: 500; font-size: .7rem; color: var(--hdr-muted); transition: color 220ms ease; }
+
+  nav.primary-nav { display: none; }
+  nav.primary-nav ul { list-style: none; display: flex; gap: 1.6rem; margin: 0; padding: 0; }
+  nav.primary-nav a { text-decoration: none; font-weight: 600; font-size: .93rem; color: var(--hdr-text); transition: color 220ms ease; }
+  nav.primary-nav a:hover { color: var(--color-primary); }
+
+  .header-actions { display: flex; align-items: center; gap: .9rem; }
+  .header-phone { display: none; align-items: center; gap: .4rem; font-weight: 700; text-decoration: none; color: var(--hdr-text); font-size: .95rem; transition: color 220ms ease; }
+
+  @media (min-width: 900px) {
+    nav.primary-nav { display: block; }
+    .header-phone { display: inline-flex; }
+  }
+  @media (max-width: 480px) {
+    .brand-name small { display: none; }
+    .brand-name { font-size: .95rem; }
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    min-height: min(88vh, 760px);
+    margin-top: calc(-1 * var(--hdr-h, 78px));
+    padding-top: var(--hdr-h, 78px);
+  }
+  .hero-media { position: absolute; inset: 0; z-index: -1; }
+  .hero-media img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-media::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,12,16,.55) 0%, rgba(10,12,16,.55) 30%, rgba(10,12,16,.92) 100%);
+  }
+  .hero-inner { padding-block: clamp(2.5rem, 8vw, 4.5rem); max-width: 720px; }
+  .hero-inner .eyebrow { color: var(--color-accent); }
+  .hero h1 { margin-top: .9rem; }
+  .hero .lede { margin-top: 1.1rem; font-size: clamp(1.02rem, 1.6vw, 1.2rem); color: rgba(255,255,255,.88); max-width: 56ch; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 1.8rem; }
+  .hero-trust { margin-top: 1.6rem; display: inline-flex; align-items: center; gap: .55rem; font-size: .85rem; font-weight: 600; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); padding: .5rem .9rem; border-radius: 999px; }
+
+  /* Trust bar */
+  .trust-bar { background: var(--color-secondary); color: #fff; }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+    padding-block: 1.6rem;
+  }
+  .trust-item { display: flex; align-items: flex-start; gap: .7rem; }
+  .trust-item svg { flex-shrink: 0; width: 26px; height: 26px; color: var(--color-accent); margin-top: 2px; }
+  .trust-item strong { display: block; font-size: .95rem; }
+  .trust-item span { display: block; font-size: .82rem; color: rgba(255,255,255,.7); }
+  @media (min-width: 760px) { .trust-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  /* Services */
+  .service-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+  @media (min-width: 640px) { .service-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .service-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .service-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+  }
+  .service-card .thumb { aspect-ratio: 4/3; overflow: hidden; }
+  .service-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .service-card .body { padding: 1.1rem 1.2rem 1.3rem; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
+  .service-card .meta { font-size: .78rem; color: var(--color-muted); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+  .service-card p.desc { color: var(--color-muted); font-size: .92rem; flex: 1; }
+  .service-card .btn { align-self: flex-start; margin-top: .3rem; padding: .55rem 1.1rem; font-size: .85rem; }
+
+  .subpanel-note {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: var(--color-surface);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.3rem;
+  }
+  .subpanel-note strong { font-family: var(--font-head); }
+  .subpanel-note span { color: var(--color-muted); font-size: .92rem; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
+  @media (min-width: 900px) { .about-grid { grid-template-columns: 1fr 1fr; } }
+  .about-photos { position: relative; }
+  .about-photos img.main { border-radius: var(--radius-lg); width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .about-photos img.badge {
+    position: absolute;
+    width: 42%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    right: 0;
+    bottom: -8%;
+    border: 5px solid #fff;
+    box-shadow: var(--shadow-sm);
+  }
+  @media (min-width: 900px) {
+    .about-photos img.badge { right: -8%; bottom: -10%; }
+  }
+  .about-copy p { color: var(--color-muted); margin-top: 1rem; font-size: 1.02rem; }
+  .diff-list { list-style: none; margin: 1.6rem 0 0; padding: 0; display: grid; gap: .85rem; }
+  .diff-list li { display: flex; gap: .7rem; align-items: flex-start; font-weight: 600; font-size: .96rem; }
+  .diff-list svg { flex-shrink: 0; width: 22px; height: 22px; color: var(--color-primary); margin-top: 1px; }
+
+  /* Pricing */
+  .price-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
+  @media (min-width: 640px) { .price-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .price-grid { grid-template-columns: repeat(3, 1fr); } }
+  .price-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.4rem 1.5rem; }
+  .price-card .amount { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--color-primary); margin-top: .4rem; }
+  .price-card .label { color: var(--color-muted); font-size: .92rem; margin-top: .35rem; }
+  .price-note { margin-top: 1.5rem; color: var(--color-muted); font-size: .92rem; max-width: 60ch; }
+
+  /* Projects */
+  .project-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+  @media (min-width: 760px) { .project-grid { grid-template-columns: repeat(3, 1fr); } }
+  .project-card { position: relative; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 4/5; }
+  .project-card img { width: 100%; height: 100%; object-fit: cover; }
+  .project-card .cap {
+    position: absolute; inset-inline: 0; bottom: 0;
+    padding: 1.4rem 1.1rem 1.1rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.75) 100%);
+    color: #fff; font-weight: 600; font-size: .95rem;
+  }
+
+  /* Closing CTA */
+  .closing {
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    padding: clamp(2rem, 5vw, 3.2rem);
+    display: grid;
+    gap: 1.8rem;
+    min-width: 0;
+  }
+  @media (min-width: 900px) { .closing { grid-template-columns: 1.2fr 1fr; align-items: center; } }
+  .closing > * { min-width: 0; }
+  .closing h2 { color: #fff; }
+  .closing p { color: rgba(255,255,255,.9); margin-top: .8rem; }
+  .contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .9rem; min-width: 0; }
+  .contact-list li { display: flex; gap: .7rem; align-items: flex-start; min-width: 0; }
+  .contact-list a { text-decoration: none; font-weight: 600; overflow-wrap: anywhere; min-width: 0; }
+  .contact-list svg { width: 22px; height: 22px; flex-shrink: 0; margin-top: 2px; }
+  .closing .btn-primary { background: #fff; color: var(--color-primary); box-shadow: none; }
+  .closing .btn-primary:hover { background: var(--color-secondary); color: #fff; }
+
+  /* Footer */
+  footer { background: var(--color-secondary); color: rgba(255,255,255,.75); }
+  .footer-inner { padding-block: 2.4rem; display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: space-between; align-items: center; font-size: .85rem; }
+  .footer-brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 700; font-family: var(--font-head); }
+  .footer-brand img { height: 30px; border-radius: 5px; }
+  .footer-license { color: rgba(255,255,255,.55); }
+
+  /* Mobile sticky CTA */
+  .mobile-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    display: flex; gap: .6rem;
+    padding: .6rem .7rem calc(.6rem + env(safe-area-inset-bottom));
+    background: #fff;
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -8px 24px rgba(0,0,0,.08);
+  }
+  .mobile-cta .btn { flex: 1; padding: .8rem .6rem; font-size: .92rem; }
+  @media (min-width: 900px) { .mobile-cta { display: none; } }
+  body { padding-bottom: 76px; }
+  @media (min-width: 900px) { body { padding-bottom: 0; } }
+</style>
+</head>
+<body>
+
+<header class="mk-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Pacheco's Service & Repair LLC — home">
+      <img src="assets/logo-badge.jpg" alt="Pacheco's Service & Repair LLC logo badge">
+      <span class="brand-name">Pacheco's Service &amp; Repair<small>Licensed Electrician · Queen Creek, AZ</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+14802512517" aria-label="Call 480-251-2517">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92z"/></svg>
+        480-251-2517
+      </a>
+      <a class="btn btn-primary" href="https://www.electricalrepairs48.com/book-online" style="padding:.6rem 1.1rem;font-size:.88rem;">Book Now</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-media">
+      <img src="assets/hero-outdoor-lighting.jpg" alt="Landscape lighting installed by Pacheco's Service & Repair along a backyard block wall in San Tan Valley, Arizona" loading="eager">
+    </div>
+    <div class="wrap hero-inner mk-reveal">
+      <span class="eyebrow">Queen Creek, AZ &middot; Family-Owned Electrician</span>
+      <h1>Licensed electrical repairs &amp; installations you can call today.</h1>
+      <p class="lede">From troubleshooting and ceiling fans to EV chargers and commercial conduit — Pacheco's Service &amp; Repair has handled it for 30+ years, with a free quote before any work starts.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:+14802512517">Call 480-251-2517</a>
+        <a class="btn btn-ghost" href="https://www.electricalrepairs48.com/book-online">Get a Free Quote</a>
+      </div>
+      <div class="hero-trust">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+        Licensed, Bonded &amp; Insured — ROC 342025 CR-11
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-bar">
+    <div class="wrap trust-grid mk-stagger">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/></svg>
+        <div><strong>Licensed &amp; Insured</strong><span>ROC 342025 CR-11</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><strong>30+ Years Experience</strong><span>Family-owned &amp; operated</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21c-4.4-3-8-6.6-8-11a8 8 0 0 1 16 0c0 4.4-3.6 8-8 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div><strong>Serving the East Valley</strong><span>Queen Creek, San Tan Valley, Chandler, Gilbert, Mesa</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        <div><strong>Free Quotes</strong><span>Before any work begins</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head mk-reveal">
+        <span class="eyebrow" style="color:var(--color-primary)">What We Do</span>
+        <h2>Electrical services for home &amp; business</h2>
+        <p>Straightforward pricing, real photos of our own work, and one call to get it booked.</p>
+      </div>
+
+      <div class="service-grid mk-stagger">
+        <article class="service-card mk-lift">
+          <div class="thumb"><img src="assets/service-free-quote.jpg" alt="Ceiling fan with light installed by Pacheco's Service & Repair, glowing warmly in a customer's living room" loading="lazy" width="900" height="675"></div>
+          <div class="body">
+            <span class="meta">1 hr &middot; Free</span>
+            <h3>Free Quote</h3>
+            <p class="desc">Walk-through and honest pricing for your project before any work starts.</p>
+            <a class="btn btn-outline" href="https://www.electricalrepairs48.com/booking-calendar/free-quote-3">Book Now</a>
+          </div>
+        </article>
+
+        <article class="service-card mk-lift">
+          <div class="thumb"><img src="assets/service-troubleshooting.jpg" alt="Pacheco's Service & Repair technicians troubleshooting an EV charger installation on a garage wall" loading="lazy" width="900" height="675"></div>
+          <div class="body">
+            <span class="meta">1 hr</span>
+            <h3>Troubleshooting Electrical</h3>
+            <p class="desc">Tracking down flickering lights, tripped breakers and dead outlets fast.</p>
+            <a class="btn btn-outline" href="https://www.electricalrepairs48.com/booking-calendar/troubleshooting-electrical">Book Now</a>
+          </div>
+        </article>
+
+        <article class="service-card mk-lift">
+          <div class="thumb"><img src="assets/service-ceiling-fan.jpg" alt="Electrician installing a decorative gold ceiling fan on a ladder" loading="lazy" width="900" height="675"></div>
+          <div class="body">
+            <span class="meta">2 hr</span>
+            <h3>Ceiling Fan Installation</h3>
+            <p class="desc">Clean, balanced installs — from standard fans to statement fixtures.</p>
+            <a class="btn btn-outline" href="https://www.electricalrepairs48.com/booking-calendar/ceiling-fan-installation">Book Now</a>
+          </div>
+        </article>
+
+        <article class="service-card mk-lift">
+          <div class="thumb"><img src="assets/service-outlet-switch.jpg" alt="Hallway with recessed lighting after switch and fixture replacement" loading="lazy" width="900" height="675"></div>
+          <div class="body">
+            <span class="meta">1 hr</span>
+            <h3>Outlets, Switches &amp; Light Fixtures</h3>
+            <p class="desc">Swapping out old, worn or unsafe outlets, switches and light fixtures.</p>
+            <a class="btn btn-outline" href="https://www.electricalrepairs48.com/booking-calendar/replace-old-outlet-light-switch-light">Book Now</a>
+          </div>
+        </article>
+
+        <article class="service-card mk-lift">
+          <div class="thumb"><img src="assets/service-ev-charger.jpg" alt="Level 2 EV charger mounted on an exterior wall" loading="lazy" width="900" height="675"></div>
+          <div class="body">
+            <span class="meta">1 hr</span>
+            <h3>EV Charger Installation</h3>
+            <p class="desc">Level 2 home EV charger installs, wired safely and up to code.</p>
+            <a class="btn btn-outline" href="https://www.electricalrepairs48.com/booking-calendar/ev-chargers-installation">Book Now</a>
+          </div>
+        </article>
+
+        <article class="service-card mk-lift">
+          <div class="thumb"><img src="assets/service-conduit.jpg" alt="Commercial property ceiling with electrical conduit and lighting" loading="lazy" width="900" height="675"></div>
+          <div class="body">
+            <span class="meta">1 hr</span>
+            <h3>Commercial Conduit</h3>
+            <p class="desc">Conduit runs and electrical work for commercial properties.</p>
+            <a class="btn btn-outline" href="https://www.electricalrepairs48.com/booking-calendar/install-conduit-in-commercial-properties">Book Now</a>
+          </div>
+        </article>
+
+        <article class="service-card mk-lift">
+          <div class="thumb"><img src="assets/service-lighting-chandelier.jpg" alt="Crystal chandelier installed by Pacheco's Service & Repair" loading="lazy" width="900" height="675"></div>
+          <div class="body">
+            <span class="meta">2 hr</span>
+            <h3>Lighting Installation</h3>
+            <p class="desc">Indoor and outdoor lighting, from chandeliers to landscape fixtures.</p>
+            <a class="btn btn-outline" href="https://www.electricalrepairs48.com/booking-calendar/lighting-installation">Book Now</a>
+          </div>
+        </article>
+
+        <article class="service-card mk-lift">
+          <div class="thumb"><img src="assets/service-emergency-lighting.jpg" alt="Interior of a commercial warehouse property serviced by Pacheco's Service & Repair" loading="lazy" width="900" height="675"></div>
+          <div class="body">
+            <span class="meta">1 hr &middot; From $145</span>
+            <h3>Emergency Lighting &amp; Exit Signs</h3>
+            <p class="desc">Code-required emergency lighting and exit sign installs for businesses.</p>
+            <a class="btn btn-outline" href="https://www.electricalrepairs48.com/booking-calendar/emergency-lighting-exit-signs">Book Now</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="subpanel-note mk-reveal">
+        <div><strong>Also available:</strong> <span>Small electrical sub panel installation.</span></div>
+        <a class="btn btn-outline" href="tel:+14802512517">Ask us about it</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us" class="alt-surface">
+    <div class="wrap about-grid">
+      <div class="about-photos mk-image-reveal">
+        <img class="main" src="assets/about-owner-portrait.jpg" alt="Owner of Pacheco's Service & Repair LLC standing in front of an open electrical panel">
+        <img class="badge" src="assets/about-owners-family.jpg" alt="Owners of Pacheco's Service & Repair LLC together on a job site at sunset">
+      </div>
+      <div class="about-copy mk-reveal">
+        <span class="eyebrow" style="color:var(--color-primary)">Why Choose Us</span>
+        <h2>A family business that shows up and does it right.</h2>
+        <p>Pacheco's Service &amp; Repair LLC is a family-owned electrical company with more than 30 years of combined experience. Our small team — including our own apprentice — handles every job personally, so you're never passed off to a subcontractor.</p>
+        <ul class="diff-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 13 4 4L19 7"/></svg> Licensed, bonded &amp; fully insured — ROC 342025 CR-11</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 13 4 4L19 7"/></svg> 30+ years of combined electrical experience</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 13 4 4L19 7"/></svg> Our own crew and apprentice, not subcontractors</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 13 4 4L19 7"/></svg> Free quote before every project</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head mk-reveal">
+        <span class="eyebrow" style="color:var(--color-primary)">Transparent Pricing</span>
+        <h2>What electrical work costs in Arizona</h2>
+        <p>General pricing guidance we share with every customer, so there are no surprises before your free quote.</p>
+      </div>
+      <div class="price-grid mk-stagger">
+        <div class="price-card mk-lift">
+          <div class="label">Average electrician rate</div>
+          <div class="amount">$50–$130/hr</div>
+          <div class="label">Most small jobs run $150–$600; major projects $2,000–$10,000.</div>
+        </div>
+        <div class="price-card mk-lift">
+          <div class="label">Ceiling fan installation (AZ)</div>
+          <div class="amount">$105–$450</div>
+          <div class="label">Averages around $240; as low as $105 if wiring, box and switch already exist.</div>
+        </div>
+        <div class="price-card mk-lift">
+          <div class="label">Level 2 EV charger install (AZ)</div>
+          <div class="amount">$800–$2,500</div>
+          <div class="label">Covers both equipment and professional installation.</div>
+        </div>
+        <div class="price-card mk-lift">
+          <div class="label">Service call minimum</div>
+          <div class="amount">$89–$150</div>
+          <div class="label">Or a 1–4 hour labor minimum — ask about bundling small tasks into one visit.</div>
+        </div>
+        <div class="price-card mk-lift">
+          <div class="label">Emergency lighting &amp; exit signs</div>
+          <div class="amount">From $145</div>
+          <div class="label">Code-required install for commercial properties.</div>
+        </div>
+        <div class="price-card mk-lift">
+          <div class="label">Free Quote</div>
+          <div class="amount">$0</div>
+          <div class="label">Every project starts with a free, no-obligation quote.</div>
+        </div>
+      </div>
+      <p class="price-note">Ranges shown are general guidance for the Arizona market, not a fixed quote — every job gets a free, specific price before work begins.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="alt-surface">
+    <div class="wrap">
+      <div class="section-head mk-reveal">
+        <span class="eyebrow" style="color:var(--color-primary)">Recent Work</span>
+        <h2>A few projects from the field</h2>
+      </div>
+      <div class="project-grid mk-stagger">
+        <div class="project-card mk-lift">
+          <img src="assets/service-lighting-chandelier.jpg" alt="Crystal chandelier installed in San Tan Valley, Arizona" loading="lazy">
+          <div class="cap">Chandelier installed in San Tan Valley</div>
+        </div>
+        <div class="project-card mk-lift">
+          <img src="assets/hero-outdoor-lighting.jpg" alt="Outdoor LED landscape lighting installation along a backyard wall" loading="lazy">
+          <div class="cap">Outside LED lighting installation</div>
+        </div>
+        <div class="project-card mk-lift">
+          <img src="assets/project-onsite-ladder.jpg" alt="Pacheco's Service & Repair technician working on-site on an exterior conduit run" loading="lazy">
+          <div class="cap">Commercial service call, on site</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="closing mk-reveal">
+        <div>
+          <h2>Need an electrician you can trust?</h2>
+          <p>Call now or request a free quote — Pacheco's Service &amp; Repair LLC serves Queen Creek, San Tan Valley, Chandler, Gilbert and Mesa, AZ.</p>
+          <div class="hero-ctas" style="margin-top:1.6rem;">
+            <a class="btn btn-primary" href="tel:+14802512517">Call 480-251-2517</a>
+            <a class="btn btn-ghost" href="https://www.electricalrepairs48.com/book-online">Get a Free Quote</a>
+          </div>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+14802512517">480-251-2517</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            <a href="mailto:Pachecosservicerepair2022@gmail.com">Pachecosservicerepair2022@gmail.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21c-4.4-3-8-6.6-8-11a8 8 0 0 1 16 0c0 4.4-3.6 8-8 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <a href="https://www.google.com/maps/search/?api=1&query=4170+West+Goldmine+Mountain+Drive+Queen+Creek+AZ+85142" target="_blank" rel="noopener">4170 West Goldmine Mountain Drive, Queen Creek, AZ 85142</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/></svg>
+            <span>Licensed, Bonded &amp; Insured — ROC 342025 CR-11</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand"><img src="assets/logo-badge.jpg" alt="Pacheco's Service & Repair LLC logo badge">Pacheco's Service &amp; Repair LLC</div>
+    <div class="footer-license">License No. ROC 342025 CR-11 &middot; Queen Creek, AZ &middot; &copy; 2026 Pacheco's Service &amp; Repair LLC. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a class="btn btn-outline" href="tel:+14802512517">Call Now</a>
+  <a class="btn btn-primary" href="https://www.electricalrepairs48.com/book-online">Free Quote</a>
+</div>
+
+<script src="motion.js"></script>
+</body>
+</html>
